@@ -1,0 +1,205 @@
+html{
+    background: black;
+}
+nav{
+    display:grid;
+    grid-template-columns: 16% 29% 40% 15%;
+    vertical-align: middle;
+    background: white;
+}
+footer{
+    display:grid;
+    grid-template-columns: 2% 30% 3% 30% 3% 30% 2%;
+}
+
+.navBar{
+    display:grid;
+    grid-template-columns: 12% 12% 19% 14% 13% 11% 10%;
+    line-height:50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+
+}
+
+a{
+    color:olivedrab;
+    text-decoration: none;
+}
+
+.navBar > h2{
+    position: relative;
+}
+
+
+.mainGrid{
+    background-image: url('wallBackground.jpg');
+    display:grid;
+    grid-template-columns: 15% 47% 2% 20% 16%;
+    padding:2em;
+    margin: 0;
+    border: 0;
+    grid-auto-rows:minmax(100, auto);
+
+}
+.main{
+    background-color: white;
+    padding: 1em;
+}
+
+#bottom{
+    color:white;
+    border:0em;
+    margin:0em;
+}
+
+.side{
+    align-self:start;
+    background-color: white;
+}
+
+.sideBar{
+    padding: 5px;
+    padding-top: 0;
+
+}
+
+h1{
+    font-size:xx-large
+}
+.box{
+    width:100%;
+    border: 5px;
+}
+.birdImage{
+    width: 100%;
+    height:100%;
+}
+body{
+    margin:0em;
+    border:0em;
+    padding:oem;
+}
+footer{
+    background-color: black;
+    margin:0em;
+    border:0em;
+    margin-bottom: 0;
+}
+.menuBar{
+    display: flex;
+    padding-top:12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+}
+.menuBar > div{
+    width: 14px;
+    height: 1.5px;
+    background-color: black;
+    margin: 1.25px 0;
+    border-radius: 5px;
+    display: none;
+}
+.menuSelect{
+    position: relative;
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+.menuContent{
+    position: absolute;
+    left:0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .75rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transform: translatex(-30px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdownMenu{
+    position: relative;
+
+}
+.dropdownMenu.active > .menuContent {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translatex(-30px);
+    pointer-events: auto;
+} 
+.menu{
+    padding: 0;
+    display: none;
+}
+
+@media all and (max-width: 800px) {
+    .mainGrid {
+        grid-template-columns: 1% 62% 2% 36% 0%;
+        padding-left: 1em;
+    }
+}
+@media all and (max-width:1600px){
+    nav{
+        display:grid;
+        grid-template-columns: 8% 30% 54% 7%;
+        vertical-align: middle;
+    }
+}
+@media all and (max-width:1400px){
+    nav{
+        display:grid;
+        grid-template-columns: 5% 30% 60% 5%;
+        vertical-align: middle;
+    }
+}
+@media all and (max-width: 1200px) {
+    .navBar{
+        display: none;
+    }
+    .menuBar > div{
+        display: flex;
+    }
+    .menu{
+        display: flex;
+        margin: 0;
+        border: 0;
+        padding: 10px;
+        color: black;
+        cursor: pointer;
+    }
+    .menuSelect{
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+    }
+    nav{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .logo{
+        width: 200px;
+        height: auto;
+    }
+
+}
+@media all and (min-width: 1200px) {
+    .dropdownMenu.active > .menuContent {
+        display: none;
+    } 
+}
